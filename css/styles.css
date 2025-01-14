@@ -1,0 +1,154 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url(../fonts/BarlowSemiCondensed-Regular.ttf);
+}
+body {
+  background-color: hsl(0, 0%, 81%);
+  font-family: "Barlow";
+  display: grid;
+}
+body article {
+  color: hsl(0, 0%, 100%);
+  margin: 2rem;
+  border-radius: 20px;
+  padding: 3rem;
+}
+body .top-content {
+  display: flex;
+  gap: 1rem;
+}
+body .top-content div p {
+  line-height: 0.5;
+}
+body #daniel {
+  background-color: hsl(263, 55%, 52%);
+}
+body #jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+body #jeanette {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+body #patrick {
+  background-color: hsl(219, 29%, 14%);
+}
+body #kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+
+img {
+  border-radius: 999px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 400px) {
+  body {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+  }
+  body #daniel {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  body #jonathan {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  body #kira {
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+  body #jeanette {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  body #patrick {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+}/*# sourceMappingURL=styles.css.map */
